@@ -1,4 +1,7 @@
+import asyncio
 from .maths import *
+from .timeout import timeout
+
 
 functionList = [
     "tan", "cos", "sin", "log", "ln", "sqrt", "sinh", "cosh", "tanh", "asin", "acos", "atan", "power"
@@ -102,7 +105,6 @@ class Calculator:
                 self.ERROR = error
             else:
                 raise error
-        return self.ans
 
     def replaces(self):
         for x in replaceList:
@@ -116,7 +118,9 @@ class Calculator:
         self.fixList()
         print(self.equationList)
         self.equation = "".join(self.equationList)
-        self.getAns()
+        oldAns, count = self.ans, 0
+        with timeout(seconds=10):
+            self.getAns()
         if isinstance(self.ans, float):
             if self.ans.is_integer():
                 self.ans = int(self.ans)

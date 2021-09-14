@@ -7,6 +7,7 @@ src/whiteCalculator/Formula.py
 src/whiteCalculator/__init__.py
 src/whiteCalculator/calculator.py
 src/whiteCalculator/maths.py
+src/whiteCalculator/timeout.py
 src/whiteCalculator.egg-info/PKG-INFO
 src/whiteCalculator.egg-info/SOURCES.txt
 src/whiteCalculator.egg-info/dependency_links.txt
