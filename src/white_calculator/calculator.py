@@ -1,3 +1,5 @@
+from .maths import *
+
 functionList = [
     "tan", "cos", "sin", "log", "ln", "sqrt", "sinh", "cosh", "tanh", "asin", "acos", "atan", "power"
 ]
@@ -21,6 +23,7 @@ class Calculator:
         self.equation = ""
         self.equationList = []
         self.ERROR = None
+        self.skipError = skipError
 
     def checkBrackets(self):
         leftBrackets = self.equation.count("(")
@@ -28,8 +31,6 @@ class Calculator:
         if leftBrackets > rightBrackets:
             addBrackets = leftBrackets - rightBrackets
             self.equation += ")" * addBrackets
-        if leftBrackets < rightBrackets:
-            self.ERROR = SyntaxError
 
     def getList(self):
         last, tryAdd = "", ""
@@ -37,8 +38,6 @@ class Calculator:
         for symbol in self.equation:
             if symbol.isnumeric() or symbol == ".":
                 last += symbol
-                if tryAdd in symbolList:
-                    self.equationList.append(tryAdd)
                 tryAdd = ""
             elif symbol.isalpha():
                 tryAdd += symbol
@@ -48,15 +47,14 @@ class Calculator:
             else:
                 if last != "":
                     self.equationList.append(last)
-                if tryAdd in symbolList:
-                    self.equationList.append(tryAdd)
 
                 self.equationList.append(symbol)
                 last, tryAdd = "", ""
+            if tryAdd in symbolList:
+                self.equationList.append(tryAdd)
+                tryAdd = ""
         if last != "":
             self.equationList.append(last)
-        if tryAdd in symbolList:
-            self.equationList.append(tryAdd)
 
     def fixList(self):
         last = "+"
@@ -72,9 +70,38 @@ class Calculator:
             pointer += 1
         self.equationList = newEquationList
 
+    def fix(self):
+        last, curr = '+', ''
+        result = ''
+        for i, char in enumerate(self.equation):
+            if char.isnumeric() or char in "(+-*/)":
+                if char.isnumeric():
+                    if last == ')' or (curr and curr not in functionList):
+                        result += '*'
+                elif char == '(':
+                    if (curr not in functionList) if curr else i and last not in "(+-*/":
+                        result += '*'
+                curr = ''
+            elif char.isalpha():
+                if last == ')' or last.isnumeric():
+                    result += '*'
+                curr += char
+            else:
+                raise ValueError()
+            last = char
+            result += char
+        self.equation = result
+
     def getAns(self):
+        self.ERROR = None
         Ans = self.ans
-        self.ans = eval(self.equation)
+        try:
+            self.ans = eval(self.equation)
+        except Exception as error:
+            if self.skipError:
+                self.ERROR = error
+            else:
+                raise error
         return self.ans
 
     def replaces(self):
@@ -87,6 +114,7 @@ class Calculator:
         self.replaces()
         self.getList()
         self.fixList()
+        print(self.equationList)
         self.equation = "".join(self.equationList)
         self.getAns()
         if isinstance(self.ans, float):
@@ -95,4 +123,4 @@ class Calculator:
         if self.ERROR is None:
             return self.ans
         else:
-            return self.ERROR
+            return "Error: " + str(self.ERROR)
