@@ -1,4 +1,4 @@
-from src.white_calculator import Calculator
+from src.whiteCalculator import Calculator
 
 c = Calculator(skipError=True)
 

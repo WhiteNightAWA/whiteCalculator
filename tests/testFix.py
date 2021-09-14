@@ -3,7 +3,7 @@ functionList = [
 ]
 symbolList = ["pi", "**", "Ans"] + functionList
 
-from src.white_calculator.maths import *
+from src.whiteCalculator.maths import *
 
 
 

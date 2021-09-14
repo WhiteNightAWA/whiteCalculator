@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 
 """
-white_calculator library
+whiteCalculator library
 -------------------------
 
-This is a proof of concept of a white_calculator library, written in Python.
+This is a proof of concept of a whiteCalculator library, written in Python.
 
 """
 
-__title__ = "white_calculator"
-__version__ = "0.0.4"
+__title__ = "whiteCalculator"
+__version__ = "0.0.1"
 __build__ = 0x000004
 __author__ = "WhiteNight"
 __license__ = "MIT License"
