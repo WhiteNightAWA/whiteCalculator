@@ -116,7 +116,6 @@ class Calculator:
         self.replaces()
         self.getList()
         self.fixList()
-        print(self.equationList)
         self.equation = "".join(self.equationList)
         oldAns, count = self.ans, 0
         with timeout(seconds=10):
