@@ -1,8 +1,12 @@
 # Calculator API for Python
 By White Night
 ## Install
-```
-pip install white-calculator
+```shell
+# Linux/macOS
+python3 -m pip install -U white-calculator
+
+# Windows
+py -3 -m pip install -U white-calculator
 ```
 
 
