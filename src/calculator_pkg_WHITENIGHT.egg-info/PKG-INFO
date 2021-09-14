@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: calculator-pkg-WHITENIGHT
+Version: 0.0.1
+Summary: A small calculator api for Python
+Home-page: https://github.com/WhiteNightAWA/calculator-api
+Author: White Night
+Author-email: evan.tang.2021@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/WhiteNightAWA/calculator-api/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Calculator API for Python
+By White Night
+
+
+# QuickStart
+```python
+>>> from calculator import Calculator
+>>> c = Calculator()
+>>> print(c.run("1+8(5^2)"))
+201
+>>> print(c.run("9Ans"))
+1809
+```
+
+## You can use:
+- sin / asin / sinh
+- cos / acos / cosh
+- tan / atan / tanh
+- ln / log
+- × / •
+- ^ / ** / power
+- √ / sqrt
+- π / pi
+- %
+- ÷
+- Ans
+
