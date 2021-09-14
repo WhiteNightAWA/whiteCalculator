@@ -1,5 +1,9 @@
 # Calculator API for Python
 By White Night
+## Install
+```
+pip install white-calculator
+```
 
 
 # QuickStart
