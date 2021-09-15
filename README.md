@@ -64,7 +64,7 @@ ZeroDivisionError: division by zero
 - `tan` / `atan` / `tanh`
 - `ln` / `log`
 - `×` / `•`
-- `^` / *`*` / `power`
+- `^` / `*` / `power`
 - `√` / `sqrt`
 - `π` / `pi`
 - `%`
