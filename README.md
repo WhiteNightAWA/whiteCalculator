@@ -1,5 +1,15 @@
 > # Calculator Module for Python
 > By White Night
+> 
+> [![PYPI](https://img.shields.io/pypi/v/whiteCalculator?style=for-the-badge)](https://pypi.org/project/whiteCalculator/)
+> [![PYPI](https://img.shields.io/pypi/pyversions/whiteCalculator?style=for-the-badge)](https://pypi.org/project/whiteCalculator/)
+> [![PYPI](https://img.shields.io/pypi/wheel/whiteCalculator?style=for-the-badge)](https://pypi.org/project/whiteCalculator/)
+> [![GITHUB](https://img.shields.io/github/contributors/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
+> [![License](https://img.shields.io/github/license/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
+> [![GITHUB](https://img.shields.io/github/languages/code-size/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
+> [![GITHUB](https://img.shields.io/github/issues/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
+> [![GITHUB](https://img.shields.io/github/issues-pr/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
+
 ## Install
 ```shell
 # Linux/macOS
@@ -45,10 +55,6 @@ Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
 ```
-
-## Links
-> [GitHub](https://github.com/WhiteNightAWA/whiteCalculator/)
-> [Pypi](https://pypi.org/project/whiteCalculator/)
 
 ## You can use:
 - sin / asin / sinh
