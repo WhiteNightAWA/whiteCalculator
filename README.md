@@ -59,6 +59,10 @@ ZeroDivisionError: division by zero
 ```
 
 ## You can use:
+```python
+sin, atan, sinh, cos, acos, cosh, tan, atan, tanh, ln, log, ×, •, ^, **, power, √, sqrt, π, pi, %, ÷, Ans
+```
+
 - `sin` / `asin` / `sinh`
 - `cos` / `acos` / `cosh`
 - `tan` / `atan` / `tanh`
