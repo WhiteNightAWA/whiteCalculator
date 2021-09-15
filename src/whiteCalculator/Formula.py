@@ -70,8 +70,10 @@ class Formula:
 
     class PythagorasTheorem:
         """
-        Pythagoras Theorem\n
-        a² + b² = c²\n
+        Pythagoras Theorem
+        ----------
+        a² + b² = c²
+        ----------
         ----------\n
         PARAMS:
             * a = length of base\n
@@ -119,8 +121,10 @@ class Formula:
 
     class LensFormula:
         """
-        Lens Formula\n
-        1/u + 1/v = 1/f\n\n
+        Lens Formula
+        ----------
+        1/u + 1/v = 1/f
+        ----------
         ----------\n
         PARAMS:
             * u = object distance
@@ -166,6 +170,100 @@ class Formula:
             f = mainCalculator.run(f"1/((1/({u})+(1/({v}))))")
             return f
 
+    class LinearMagnificationFormula:
+        """
+        Linear Magnification Formula
+        ----------
+        m = hᵢ/hₒ = v/u
+        ----------
+        ----------\n
+        PARAMS:
+            * m = Magnification of lens
+            * hₒ = height of object
+            * hᵢ = height of image
+            * u = object distance
+            * v = image distance
+        ----------\n
+        CLASS:
+            * getM => get Magnification of lens
+                * byHeight(o, i):
+                    return m
+
+                * byDistance(u, v):
+                    return m
+        """
+
+        class getM:
+            """
+            Get Magnification of lens\n
+            ----------\n
+            FUNCTIONS:
+                * byHeight(o, i):
+                    return m
+                * byDistance(u, v):
+                    return m
+            """
+
+            @classmethod
+            def byHeight(cls, o, i):
+                """
+                :param o: height of object
+                :param i: height of image
+                :return: m: Magnification of lens
+                """
+                m = mainCalculator.run(f"({o})/({i})")
+                return m
+
+            @classmethod
+            def byDistance(cls, u, v):
+                """
+                :param u: object distance
+                :param v: image distance
+                :return: m: Magnification of lens
+                """
+                m = mainCalculator.run(f"({v})/({u})")
+                return m
+
+        class getI:
+
+            @classmethod
+            def byDistance(cls, v):
+                pass
+
+            @classmethod
+            def byMagnification(cls, m, o):
+                pass
+
+        class getO:
+
+            @classmethod
+            def byDistance(cls, u):
+                pass
+
+            @classmethod
+            def byMagnification(cls, m, i):
+                pass
+
+        class getV:
+
+            @classmethod
+            def byHeight(cls, i):
+                pass
+
+            @classmethod
+            def byMagnification(cls, m, u):
+                pass
+
+        class getU:
+
+            @classmethod
+            def byHeight(cls, o):
+                pass
+
+            @classmethod
+            def byMagnification(cls, m, v):
+                pass
 
     PT = PythagorasTheorem
     LF = LensFormula
+    LMF = LinearMagnificationFormula
