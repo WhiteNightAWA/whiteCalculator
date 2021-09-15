@@ -1,68 +1,171 @@
 from .calculator import Calculator
 
+mainCalculator = Calculator(
+        skipError=True
+)
+
 
 class Formula:
+    """
+    A _ of formulas\n
+    ----------\n
+    FORMULAS:
+        * Pythagoras Theorem
+        * Lens Formula
+    """
+    # f1 = QuadraticEquation
+    # f2 = CosineTheorem
+    # f3 = HeronFormula
 
-    def __init__(self):
+    # @classmethod
+    # def QuadraticEquation(cls, a: [int, float, str], b: [int, float, str], c: [int, float, str]):
+    #
+    #     """
+    #     Quadratic Equation\n
+    #     Example: QuadraticEquation(1, -2, 1) => return (1, 1)
+    #
+    #     :param a: value of a
+    #     :param b: value of a
+    #     :param c: value of a
+    #     :return: positive result, negative result
+    #     """
+    #
+    #     x1 = cls.calculator.run(f"(-({b})+sqrt((({b})^(2))-4*({a})*({c})))/(2*({a}))")
+    #     x2 = cls.calculator.run(f"(-({b})-sqrt((({b})^(2))-4*({a})*({c})))/(2*({a}))")
+    #     return x1, x2
+    #
+    # @classmethod
+    # def CosineTheorem(cls, b: [int, float, str], c: [int, float, str], Ø: [int, float, str]):
+    #
+    #     """
+    #     Law of Cosines
+    #
+    #     Example: CosineTheorem(6, 6, 60) => return 6
+    #
+    #     :param b: sides b
+    #     :param c: sides c
+    #     :param Ø: angle Ø
+    #     :return: sides a
+    #     """
+    #
+    #     a = cls.calculator.run(f"sqrt({c}^2+{b}^2-2*{b}*{c}*cos({Ø}))")
+    #     return a
+    #
+    # @classmethod
+    # def HeronFormula(cls, a: [int, float, str], b: [int, float, str], c: [int, float, str]):
+    #
+    #     """
+    #     Heron's Formula
+    #
+    #     Example: HeronFormula(4, 13, 15) => return 24
+    #
+    #     :param a: sides a
+    #     :param b: sides b
+    #     :param c: sides c
+    #     :return: Area
+    #     """
+    #
+    #     A = cls.calculator.run(f"0.25*sqrt(({a}+{b}+{c})*(-{a}+{b}+{c})*({a}-{b}+{c})*({a}+{b}-{c}))")
+    #     return A
 
+    class PythagorasTheorem:
         """
-        Formulas
-
-        f1 = QuadraticEquation = Quadratic Equation\n
-        f2 = Law of Cosines = CosineTheorem\n
-        f3 = Heron's Formula = HeronFormula\n
-
+        Pythagoras Theorem\n
+        a² + b² = c²\n
+        ----------\n
+        PARAMS:
+            * a = length of base\n
+            * b = length of perpendicular\n
+            * c = length of hypotenuse\n
+        ----------\n
+        FUNCTIONS:
+            * def getA(b, c):
+                return the value of a
+            * def getB(a, c):
+                return the value of b
+            * def getC(b, c):
+                return the value of c
         """
 
-        self.calculator = Calculator()
-        self.f1 = self.QuadraticEquation
-        self.f2 = self.CosineTheorem
-        self.f3 = self.HeronFormula
+        @classmethod
+        def getA(cls, b, c):
+            """
+            :param b: length of perpendicular
+            :param c: length of hypotenuse
+            :return: a: length of base
+            """
+            a = mainCalculator.run(f"sqrt((({c})^2)-(({b})^2))")
+            return a
 
-    def QuadraticEquation(self, a: float, b: float, c: float):
+        @classmethod
+        def getB(cls, a, c):
+            """
+            :param a: length of base
+            :param c: length of hypotenuse
+            :return: b: length of perpendicular
+            """
+            b = mainCalculator.run(f"sqrt((({c})^2)-(({a})^2))")
+            return b
 
+        @classmethod
+        def getC(cls, a, b):
+            """
+            :param a: length of base
+            :param b: length of perpendicular
+            :return: c: length of hypotenuse
+            """
+            c = mainCalculator.run(f"sqrt((({a})^2)+(({b})^2))")
+            return c
+
+    class LensFormula:
         """
-        Quadratic Equation\n
-        Example: QuadraticEquation(1, -2, 1) => return (1, 1)
-
-        :param a: value of a
-        :param b: value of a
-        :param c: value of a
-        :return: (positive result, negative result)
+        Lens Formula\n
+        1/u + 1/v = 1/f\n\n
+        ----------\n
+        PARAMS:
+            * u = object distance
+            * v = image distance
+            * f = focus length
+        ----------\n
+        FUNCTIONS:
+            * getU(v, f):
+                return the value of object distance
+            * getV(u, f):
+                return the value of image distance
+            * getF(u, v):
+                return the value of focus length
         """
 
-        x1 = self.calculator.run(f"(-({b})+sqrt((({b})^(2))-4*({a})*({c})))/(2*({a}))")
-        x2 = self.calculator.run(f"(-({b})-sqrt((({b})^(2))-4*({a})*({c})))/(2*({a}))")
-        return x1, x2
+        @classmethod
+        def getU(cls, v, f):
+            """
+            :param v: image distance
+            :param f: focus length
+            :return: u: object distance
+            """
+            u = mainCalculator.run(f"1/((1/({f})-(1/({v}))))")
+            return u
 
-    def CosineTheorem(self, b: float, c: float, Ø: float):
+        @classmethod
+        def getV(cls, u, f):
+            """
+            :param u: object distance
+            :param f: focus length
+            :return: u: image distance
+            """
+            v = mainCalculator.run(f"1/((1/({f})-(1/({u}))))")
+            return v
 
-        """
-        Law of Cosines
+        @classmethod
+        def getF(cls, u, v):
+            """
+            :param u: object distance
+            :param v: image distance
+            :return: u: focus length
+            """
+            f = mainCalculator.run(f"1/((1/({u})+(1/({v}))))")
+            return f
 
-        Example: CosineTheorem(6, 6, 60) => return 6
 
-        :param b: sides b
-        :param c: sides c
-        :param Ø: angle Ø
-        :return: sides a
-        """
-
-        a = self.calculator.run(f"sqrt({c}^2+{b}^2-2*{b}*{c}*cos({Ø}))")
-        return a
-
-    def HeronFormula(self, a: float, b: float, c: float):
-
-        """
-        Heron's Formula
-
-        Example: HeronFormula(4, 13, 15) => return 24
-
-        :param a: sides a
-        :param b: sides b
-        :param c: sides c
-        :return: Area
-        """
-
-        A = self.calculator.run(f"0.25*sqrt(({a}+{b}+{c})*(-{a}+{b}+{c})*({a}-{b}+{c})*({a}+{b}-{c}))")
-        return A
+    PT = PythagorasTheorem
+    LF = LensFormula

@@ -4,7 +4,7 @@ from .timeout import timeout
 
 
 functionList = [
-    "tan", "cos", "sin", "log", "ln", "sqrt", "sinh", "cosh", "tanh", "asin", "acos", "atan", "power"
+    "tan", "cos", "sin", "log", "ln", "sqrt", "sinh", "cosh", "tanh", "asin", "acos", "atan", "power", "abs"
 ]
 symbolList = ["pi", "**", "Ans"] + functionList
 
