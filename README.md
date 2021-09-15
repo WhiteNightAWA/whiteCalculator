@@ -39,8 +39,9 @@ py -3 -m pip install -U whiteCalculator
 3
 ```
 #### Formula List
-`Pythagoras Theorem`, `Lens Formula`
-
+```python
+PythagorasTheorem, LensFormula
+```
 
 ## Errors
 ```python
