@@ -10,6 +10,7 @@
 > [![GITHUB](https://img.shields.io/github/issues/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
 > [![GITHUB](https://img.shields.io/github/issues-pr/WhiteNightAWA/whiteCalculator?style=for-the-badge)](https://github.com/WhiteNightAWA/whiteCalculator/)
 
+***
 ## Install
 ```shell
 # Linux/macOS
@@ -18,8 +19,7 @@ python3 -m pip install -U whiteCalculator
 # Windows
 py -3 -m pip install -U whiteCalculator
 ```
-
-
+***
 # QuickStart
 ### Calculator
 ```python
@@ -42,7 +42,7 @@ py -3 -m pip install -U whiteCalculator
 ```python
 PythagorasTheorem, LensFormula
 ```
-
+***
 ## Errors
 ```python
 >>> from whiteCalculator import Calculator
@@ -57,12 +57,8 @@ Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
 ```
-
+***
 ## You can use:
-```python
-sin, atan, sinh, cos, acos, cosh, tan, atan, tanh, ln, log, ×, •, ^, **, power, √, sqrt, π, pi, %, ÷, Ans
-```
-
 - `sin` / `asin` / `sinh`
 - `cos` / `acos` / `cosh`
 - `tan` / `atan` / `tanh`
