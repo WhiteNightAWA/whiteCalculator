@@ -1,4 +1,4 @@
-> # Calculator API for Python
+> # Calculator Module for Python
 > By White Night
 ## Install
 ```shell
@@ -11,6 +11,7 @@ py -3 -m pip install -U whiteCalculator
 
 
 # QuickStart
+### Calculator
 ```python
 >>> from whiteCalculator import Calculator
 >>> c = Calculator()
@@ -19,6 +20,16 @@ py -3 -m pip install -U whiteCalculator
 >>> print(c.run("9Ans"))
 1809
 ```
+### Formula
+```python
+>>> from whiteCalculator import Formula
+>>> f = Formula()
+>>> print(f.f2(6, 6, 60))
+6
+>>> print(f.QuadraticEquation(1, -2, 1))
+(1, 1)
+```
+
 
 ## Errors
 ```python

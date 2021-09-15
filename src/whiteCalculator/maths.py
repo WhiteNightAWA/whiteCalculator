@@ -11,24 +11,24 @@ power = math.pow
 
 
 def sin(num):
-    return math.sin(math.radians(num))
+    return round(math.sin(math.radians(num)), 15)
 
 
 def asin(num):
-    return math.degrees(math.atan(num))
+    return round(math.degrees(math.atan(num)), 15)
 
 
 def cos(num):
-    return math.cos(math.radians(num))
+    return round(math.cos(math.radians(num)), 15)
 
 
 def acos(num):
-    return math.degrees(math.acos(num))
+    return round(math.degrees(math.acos(num)), 15)
 
 
 def tan(num):
-    return math.tan(math.radians(num))
+    return round(math.tan(math.radians(num)), 15)
 
 
 def atan(num):
-    return math.degrees(math.atan(num))
+    return round(math.degrees(math.atan(num)), 15)
