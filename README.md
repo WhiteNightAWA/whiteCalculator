@@ -21,42 +21,48 @@ python3 -m pip install -U whiteCalculator
 py -3 -m pip install -U whiteCalculator
 ```
 ***
-# QuickStart
+# [QuickStart](./INFO/QuickStart.md)
 ### Calculator
 ```python
->>> from whiteCalculator import Calculator
->>> c = Calculator()
->>> print(c.run("1+8(5^2)"))
-201
->>> print(c.run("9Ans"))
-1809
+from whiteCalculator import Calculator
+c = Calculator()
+print(c.run("1+8(5^2)"))
+# Output: 201
+print(c.run("9Ans"))
+# Output: 1809
 ```
 ### Formula
 ```python
->>> from whiteCalculator import Formula
->>> Formula.PythagorasTheorem.getA(b=4, c=5)
-3
->>> Formula.PythagorasTheorem.getA(b="2^2", c="√(25)")
-3
+from whiteCalculator import Formula
+Formula.PythagorasTheorem.getA(b=4, c=5)
+# Output: 3
+Formula.PythagorasTheorem.getA(b="2^2", c="√(25)")
+# Output: 3
 ```
 #### Formula List
 ```python
-PythagorasTheorem, LensFormula
+PythagorasTheorem, LensFormula, LinearMagnificationFormula
 ```
 ***
-## Errors
+### TODO
+- make Doc
+- more Formula
+- Calculate without eval
+***
+### Errors
 ```python
->>> from whiteCalculator import Calculator
+from whiteCalculator import Calculator
 
->>> c2 = Calculator() # Default is True
->>> c2.run("9/0")
-Error: division by zero
+c1 = Calculator(skipError=True) # Default is True
+c1.run("9/0")
+# Output: Error: division by zero
 
->>> c1 = Calculator(skipError=False)
->>> c1.run("9/0")
-Traceback (most recent call last):
-    ...
-ZeroDivisionError: division by zero
+c2 = Calculator(skipError=False)
+c2.run("9/0")
+# Outputs:
+# Traceback (most recent call last):
+#     ...
+# ZeroDivisionError: division by zero
 ```
 ***
 ## You can use:

@@ -12,61 +12,8 @@ class Formula:
     FORMULAS:
         * Pythagoras Theorem
         * Lens Formula
+        * Linear Magnification Formula
     """
-    # f1 = QuadraticEquation
-    # f2 = CosineTheorem
-    # f3 = HeronFormula
-
-    # @classmethod
-    # def QuadraticEquation(cls, a: [int, float, str], b: [int, float, str], c: [int, float, str]):
-    #
-    #     """
-    #     Quadratic Equation\n
-    #     Example: QuadraticEquation(1, -2, 1) => return (1, 1)
-    #
-    #     :param a: value of a
-    #     :param b: value of a
-    #     :param c: value of a
-    #     :return: positive result, negative result
-    #     """
-    #
-    #     x1 = cls.calculator.run(f"(-({b})+sqrt((({b})^(2))-4*({a})*({c})))/(2*({a}))")
-    #     x2 = cls.calculator.run(f"(-({b})-sqrt((({b})^(2))-4*({a})*({c})))/(2*({a}))")
-    #     return x1, x2
-    #
-    # @classmethod
-    # def CosineTheorem(cls, b: [int, float, str], c: [int, float, str], Ø: [int, float, str]):
-    #
-    #     """
-    #     Law of Cosines
-    #
-    #     Example: CosineTheorem(6, 6, 60) => return 6
-    #
-    #     :param b: sides b
-    #     :param c: sides c
-    #     :param Ø: angle Ø
-    #     :return: sides a
-    #     """
-    #
-    #     a = cls.calculator.run(f"sqrt({c}^2+{b}^2-2*{b}*{c}*cos({Ø}))")
-    #     return a
-    #
-    # @classmethod
-    # def HeronFormula(cls, a: [int, float, str], b: [int, float, str], c: [int, float, str]):
-    #
-    #     """
-    #     Heron's Formula
-    #
-    #     Example: HeronFormula(4, 13, 15) => return 24
-    #
-    #     :param a: sides a
-    #     :param b: sides b
-    #     :param c: sides c
-    #     :return: Area
-    #     """
-    #
-    #     A = cls.calculator.run(f"0.25*sqrt(({a}+{b}+{c})*(-{a}+{b}+{c})*({a}-{b}+{c})*({a}+{b}-{c}))")
-    #     return A
 
     class PythagorasTheorem:
         """
@@ -179,8 +126,8 @@ class Formula:
         ----------\n
         PARAMS:
             * m = Magnification of lens
-            * hₒ = height of object
-            * hᵢ = height of image
+            * hₒ (o) = height of object
+            * hᵢ (i) = height of image
             * u = object distance
             * v = image distance
         ----------\n
@@ -191,6 +138,16 @@ class Formula:
 
                 * byDistance(u, v):
                     return m
+        ----------\n
+        FUNCTIONS:
+            * getO(m, i):
+                return o
+            * getI(m, o):
+                return i
+            * getV(m, u):
+                return v
+            * getU(m, v):
+                return u
         """
 
         class getM:
@@ -224,45 +181,45 @@ class Formula:
                 m = mainCalculator.run(f"({v})/({u})")
                 return m
 
-        class getI:
+        @classmethod
+        def getO(cls, m, i):
+            """
+            :param m: Magnification of lens
+            :param i: height of image
+            :return: o: height of object
+            """
+            o = mainCalculator.run(f"({i})/({m})")
+            return o
 
-            @classmethod
-            def byDistance(cls, v):
-                pass
+        @classmethod
+        def getI(cls, m, o):
+            """
+            :param m: Magnification of lens
+            :param o: height of object
+            :return: i: height of image
+            """
+            i = mainCalculator.run(f"({m})*({o})")
+            return i
 
-            @classmethod
-            def byMagnification(cls, m, o):
-                pass
+        @classmethod
+        def getV(cls, m, u):
+            """
+            :param m: Magnification of lens
+            :param u: object distance
+            :return: v: image distance
+            """
+            v = mainCalculator.run(f"({m})*({u})")
+            return v
 
-        class getO:
-
-            @classmethod
-            def byDistance(cls, u):
-                pass
-
-            @classmethod
-            def byMagnification(cls, m, i):
-                pass
-
-        class getV:
-
-            @classmethod
-            def byHeight(cls, i):
-                pass
-
-            @classmethod
-            def byMagnification(cls, m, u):
-                pass
-
-        class getU:
-
-            @classmethod
-            def byHeight(cls, o):
-                pass
-
-            @classmethod
-            def byMagnification(cls, m, v):
-                pass
+        @classmethod
+        def getU(cls, m, v):
+            """
+            :param m: Magnification of lens
+            :param v: image distance
+            :return: u: object distance
+            """
+            u = mainCalculator.run(f"({v})/({m})")
+            return u
 
     PT = PythagorasTheorem
     LF = LensFormula
