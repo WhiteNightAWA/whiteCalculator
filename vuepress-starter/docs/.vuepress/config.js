@@ -2,6 +2,7 @@ module.exports = {
   lang: "en",
   title: "White Calculator",
   description: "By WhiteNight",
+  base: "/whiteCalculator/",
   darkMode: true,
   themeConfig: {
     // logo: "https://i.ibb.co/wgvwXKY/logo.png",
