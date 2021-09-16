@@ -44,7 +44,7 @@ Formula.PythagorasTheorem.getA(b="2^2", c="√(25)")
 PythagorasTheorem, LensFormula, LinearMagnificationFormula
 ```
 ***
-# [DOCS]()
+# [DOCS](https://whitenightawa.github.io/whiteCalculator/)
 ***
 ### TODO
 - make Doc
