@@ -75,14 +75,14 @@ class Formula:
         ----------\n
         PARAMS:
             * u = object distance
-            * v = image distance
+            * v = images distance
             * f = focus length
         ----------\n
         FUNCTIONS:
             * getU(v, f):
                 return the value of object distance
             * getV(u, f):
-                return the value of image distance
+                return the value of images distance
             * getF(u, v):
                 return the value of focus length
         """
@@ -90,7 +90,7 @@ class Formula:
         @classmethod
         def getU(cls, v, f):
             """
-            :param v: image distance
+            :param v: images distance
             :param f: focus length
             :return: u: object distance
             """
@@ -102,7 +102,7 @@ class Formula:
             """
             :param u: object distance
             :param f: focus length
-            :return: u: image distance
+            :return: u: images distance
             """
             v = mainCalculator.run(f"1/((1/({f})-(1/({u}))))")
             return v
@@ -111,7 +111,7 @@ class Formula:
         def getF(cls, u, v):
             """
             :param u: object distance
-            :param v: image distance
+            :param v: images distance
             :return: u: focus length
             """
             f = mainCalculator.run(f"1/((1/({u})+(1/({v}))))")
@@ -127,9 +127,9 @@ class Formula:
         PARAMS:
             * m = Magnification of lens
             * hₒ (o) = height of object
-            * hᵢ (i) = height of image
+            * hᵢ (i) = height of images
             * u = object distance
-            * v = image distance
+            * v = images distance
         ----------\n
         CLASS:
             * getM => get Magnification of lens
@@ -165,7 +165,7 @@ class Formula:
             def byHeight(cls, o, i):
                 """
                 :param o: height of object
-                :param i: height of image
+                :param i: height of images
                 :return: m: Magnification of lens
                 """
                 m = mainCalculator.run(f"({o})/({i})")
@@ -175,7 +175,7 @@ class Formula:
             def byDistance(cls, u, v):
                 """
                 :param u: object distance
-                :param v: image distance
+                :param v: images distance
                 :return: m: Magnification of lens
                 """
                 m = mainCalculator.run(f"({v})/({u})")
@@ -185,7 +185,7 @@ class Formula:
         def getO(cls, m, i):
             """
             :param m: Magnification of lens
-            :param i: height of image
+            :param i: height of images
             :return: o: height of object
             """
             o = mainCalculator.run(f"({i})/({m})")
@@ -196,7 +196,7 @@ class Formula:
             """
             :param m: Magnification of lens
             :param o: height of object
-            :return: i: height of image
+            :return: i: height of images
             """
             i = mainCalculator.run(f"({m})*({o})")
             return i
@@ -206,7 +206,7 @@ class Formula:
             """
             :param m: Magnification of lens
             :param u: object distance
-            :return: v: image distance
+            :return: v: images distance
             """
             v = mainCalculator.run(f"({m})*({u})")
             return v
@@ -215,7 +215,7 @@ class Formula:
         def getU(cls, m, v):
             """
             :param m: Magnification of lens
-            :param v: image distance
+            :param v: images distance
             :return: u: object distance
             """
             u = mainCalculator.run(f"({v})/({m})")

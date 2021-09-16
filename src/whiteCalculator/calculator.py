@@ -180,7 +180,6 @@ class Calculator:
             else:
                 return eval("".join(equationList))
         else:
-
             def run(toCalculateFunc, symFunc, countFunc):
                 if symFunc == "*":
                     if "**" not in "".join(toCalculateFunc):
@@ -227,7 +226,7 @@ class Calculator:
                             equationList, sym, count = run(equationList, sym, count)
             return "".join(equationList)
 
-    def run(self, equation: str):
+    def run(self, equation: [str, bytes]):
         self.equation = equation.replace(" ", "")
         with timeout(seconds=10):
             res = self.calculate()
