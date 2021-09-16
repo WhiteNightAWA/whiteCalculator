@@ -44,6 +44,8 @@ Formula.PythagorasTheorem.getA(b="2^2", c="√(25)")
 PythagorasTheorem, LensFormula, LinearMagnificationFormula
 ```
 ***
+# [DOCS]()
+***
 ### TODO
 - make Doc
 - more Formula
