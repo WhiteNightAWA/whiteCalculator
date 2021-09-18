@@ -1,13 +1,14 @@
 Metadata-Version: 2.1
 Name: whiteCalculator
-Version: 0.0.7
+Version: 0.0.8
 Summary: A small calculator module for Python
 Home-page: https://github.com/WhiteNightAWA/whiteCalculator
 Author: WhiteNight
 Author-email: evan.tang.2021@gmail.com
 License: MIT License
+Project-URL: Home Page, https://whitenightawa.github.io/whiteCalculator/
 Project-URL: Bug Tracker, https://github.com/WhiteNightAWA/whiteCalculator/issues
-Project-URL: Documentation, https://whitenightawa.github.io/whiteCalculator/
+Project-URL: Documentation, https://whitenightawa.github.io/whiteCalculator/DOCS/
 Project-URL: Funding, https://www.buymeacoffee.com/WhiteNightAWA
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
@@ -62,7 +63,7 @@ Formula.PythagorasTheorem.getA(b="2^2", c="√(25)")
 PythagorasTheorem, LensFormula, LinearMagnificationFormula
 ```
 ***
-# [DOCS]()
+# [DOCS](https://whitenightawa.github.io/whiteCalculator/)
 ***
 ### TODO
 - make Doc
