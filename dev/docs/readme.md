@@ -2,6 +2,7 @@
 home: true
 heroText: White Calculator
 tagline: Calculator Module for Python
+heroImage: /logo.svg
 
 action:
   - text: Get Started →

@@ -5,11 +5,13 @@ module.exports = config({
     title: "White Calculator",
     description: "By WhiteNight",
     base: "/whiteCalculator/",
-    darkMode: true,
+    icon: "/logo.svg",
     edEnhance: {
         enableAll: true,
     },
     themeConfig: {
+        logo: "/logo.svg",
+        darkMode: true,
 
 // ========================================NAVBAR========================================
         editLink: false,
