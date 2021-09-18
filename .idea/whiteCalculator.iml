@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/vuepress/node_modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vuepress-starter/node_modules.backup" isTestSource="true" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (Calculator)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

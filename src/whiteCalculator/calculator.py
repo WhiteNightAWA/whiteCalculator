@@ -32,7 +32,6 @@ class Calculator:
         self.ans = 0
         self.equation = ""
         self.equationList = []
-        self.ERROR = None
         self.skipError = skipError
         self.useEval = useEval
         self.showEquation = showEquation
@@ -109,7 +108,7 @@ class Calculator:
             else:
                 raise error
 
-    def calculate(self):
+    def calculateEquation(self):
 
         def lookup():
             pass
@@ -229,7 +228,7 @@ class Calculator:
     def run(self, equation: [str, bytes]):
         self.equation = equation.replace(" ", "")
         with timeout(seconds=10):
-            res = self.calculate()
+            res = self.calculateEquation()
         if "ERROR:" in str(res):
             return res
         else:
@@ -238,3 +237,6 @@ class Calculator:
                 if self.ans.is_integer():
                     self.ans = int(self.ans)
             return self.ans
+
+    async def calculate(self, equation: [str, bytes]):
+        return self.run(equation)
